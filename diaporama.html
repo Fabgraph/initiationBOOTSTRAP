@@ -23,8 +23,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent"><!-- la ul est dans une div avec class et id -->
                 <ul class="navbar-nav ml-auto"><!-- navbar-nav supprime les puces;  ml-auto empêche le xdébordement de la navbar-->
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li class="nav-item"><a href="diaporama.html" class="nav-link">Diaporama</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="diaporama.html" class="nav-link active">Diaporama</a></li>
                     <!-- ici nous mettons un menu déroulant -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Voir nos produits</a>
@@ -44,12 +44,60 @@
         </nav>
     <!-- ici on va mettre une section en pleine largeur sous la nav "a hero section", chez Bootstrap un "Jumbotron" c'est un composant -->
         <div class="jumbotron">
-            <h1 class="display-4">À la une ce lundi 04 juin 2018 : bientôt l'été !!!</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi velit sunt doloribus amet impedit aliquam saepe fugiat, sit explicabo dolore error? Vel sit unde facilis quis debitis porro placeat cumque.</p>
-            <p class="lead">
+            <h1 class="display-4">Les plus belles destinations de vacances</h1>
+            <!-- <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi velit sunt doloribus amet impedit aliquam saepe fugiat, sit explicabo dolore error? Vel sit unde facilis quis debitis porro placeat cumque.</p> -->
+            <!-- <p class="lead">
                 <a href="#" class="btn btn-lg btn-primary" role="button">Préparez l'été...</a>
-            </p>
+            </p> -->
         </div><!-- fin de la div jumbotron -->
+        <div class="row">
+            <div class="col-lg-12 center-block">
+                <div id="carousel01" class="carousel slide" data-ride="carousel">
+                    <!-- ici on place les indicateurs -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel01" data-slide-to="1"></li>
+                            <li data-target="#carousel01" data-slide-to="2"></li>
+                        </ol>
+                    <!-- le diaporama est dans une div avec un id -->
+                    <div class="carousel-inner">
+                        <!-- tous les items du diaporama sont dans une div avec la class carousel-inner (interne) et data-ride -->
+                        <div class="carousel-item active">
+                            <img src="img/1000x370_3_schwyz_ivan_mythen_grund.jpg" alt="Montagne" class="w-100 d-block">
+                            <!-- et ici la légende de la photo -->
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>La montangne</h5>
+                                    <p>En été, la montagne est magnifique...</p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/lacs.jpg" alt="Lacs" class="w-100 d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Un lac dans la brûme</h5>
+                                    <p>Au petit matin, un lac est magnifique...</p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/lac01.jpg" alt="Lac1" class="w-100 d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Un lac dans les montagnes</h5>
+                                    <p>Au printemps, un lac est magnifique...</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ici nous plaçons les liens de contrôles du diaporama -->
+                        <a href="#carousel01" role="button" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédent</span>
+                            <!-- sr = screen reader -->
+                        </a>
+                        <a href="#carousel01" role="button" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+            </div><!-- fin du diaporama -->
+        </div><!-- fin de rangée-->
     <!-- ici commence la grille de Bootstrap avec une rangée et des colonnes-->
         <div class="row">
             <div class="col-sm-12 col-md-4"><!-- col-sm-12 sur un écran small 12 col de largeur, sur un écran medium 4 col de largeur -->
@@ -80,32 +128,7 @@
                 </div>
             </div><!-- fin col 3 -->
         </div><!-- fin de la div class row -->
-        <!-- une nouvelle rangée -->
-        <div class="row mt-sm-4 mt-md-0 ">
-            <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
-                <h3>Un titre 3</h3>
-                <p class="lead">Un paragraphe class lead</p> <!-- la class .lead vient après un titre -->
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet consequatur nesciunt a voluptatem laborum beatae quisquam impedit excepturi quas ullam? Sequi magnam obcaecati est eaque voluptates repudiandae vero doloremque ex!</p>
-            </div>
-            <div class="col-sm-12 col-md-4 fond_bleu">
-                <!-- Une navigation verticale  -->
-                <h3>Menu secondaire</h3>
-                <ul class="nav flex-column nav-pills">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Lien 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Lien 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Lien 3</a>
-                    </li>
-                </ul>
-            </div>
-        </div><!-- fin de la nouvelle rangée rangée 2 -->
+        
         <!-- début rangée 3 -->
         <div class="row">
             <div class="col-md-12 col-lg-3">
@@ -144,6 +167,36 @@
                     </div>
                 </div>
             </div>
+        </div><!-- fin de la rangée 3 -->
+        <div class="row">
+                <div class="col-lg-12">
+                        <img src="img/mainserrees.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-4">
+                    <img src="img/dessin01.jpg" alt="dessin" class="img-thumbnail rounded float-left">
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/esquisse.jpg" alt="esquisse" class="img-thumbnail rounded rounded mx-auto d-block">
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/images02.jpg" alt="portrait" class="img-thumbnail rounded float-right">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-3">
+                    <img src="img/manga02.jpg" alt="dessin" class="img-thumbnail rounded float-left">
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/Telenine_darkmatter.png" alt="portrait" class="img-thumbnail rounded float-right">
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/manga01.jpg" alt="portrait" class="img-thumbnail rounded float-left">
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/manga03.jpg" alt="esquisse" class="img-thumbnail rounded float-right">
+                </div>
         </div>
     </div><!-- fin de la div class container 1 -->
     <footer class="mt-1">
